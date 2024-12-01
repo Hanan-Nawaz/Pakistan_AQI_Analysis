@@ -1,0 +1,6 @@
+[2024-12-01T16:45:53.152+0500] {processor.py:186} INFO - Started process (PID=36320) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2024-12-01T16:45:53.153+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2024-12-01T16:45:53.154+0500] {logging_mixin.py:190} INFO - [2024-12-01T16:45:53.154+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2024-12-01T16:45:53.162+0500] {logging_mixin.py:190} INFO - [2024-12-01T16:45:53.161+0500] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+[2024-12-01T16:45:53.162+0500] {processor.py:927} WARNING - No viable dags retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2024-12-01T16:45:53.300+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.154 seconds

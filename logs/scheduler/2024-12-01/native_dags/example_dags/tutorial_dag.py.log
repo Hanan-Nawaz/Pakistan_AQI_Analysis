@@ -1,0 +1,36 @@
+[2024-12-01T15:06:44.395+0500] {processor.py:186} INFO - Started process (PID=27887) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:06:44.397+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-12-01T15:06:44.398+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.398+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:06:44.429+0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:06:44.673+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.672+0500] {override.py:1911} INFO - Created Permission View: can delete on DAG:tutorial_dag
+[2024-12-01T15:06:44.690+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.689+0500] {override.py:1911} INFO - Created Permission View: can read on DAG:tutorial_dag
+[2024-12-01T15:06:44.703+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.703+0500] {override.py:1911} INFO - Created Permission View: can edit on DAG:tutorial_dag
+[2024-12-01T15:06:44.712+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.712+0500] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:tutorial_dag
+[2024-12-01T15:06:44.723+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.723+0500] {override.py:1911} INFO - Created Permission View: can create on DAG Run:tutorial_dag
+[2024-12-01T15:06:44.730+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.730+0500] {override.py:1911} INFO - Created Permission View: can read on DAG Run:tutorial_dag
+[2024-12-01T15:06:44.738+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.738+0500] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:tutorial_dag
+[2024-12-01T15:06:44.739+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.739+0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-01T15:06:44.819+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.819+0500] {dag.py:3262} INFO - Creating ORM DAG for tutorial_dag
+[2024-12-01T15:06:44.820+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:06:44.819+0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-12-01T15:06:44.838+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.448 seconds
+[2024-12-01T15:11:07.219+0500] {processor.py:186} INFO - Started process (PID=28516) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:11:07.222+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-12-01T15:11:07.224+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:11:07.223+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:11:07.260+0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:11:07.423+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:11:07.422+0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-01T15:11:07.443+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:11:07.443+0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-12-01T15:11:07.469+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.258 seconds
+[2024-12-01T15:14:36.733+0500] {processor.py:186} INFO - Started process (PID=28888) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:14:36.736+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-12-01T15:14:36.737+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:14:36.736+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:14:36.762+0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:14:36.884+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:14:36.884+0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-01T15:14:36.897+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:14:36.897+0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-12-01T15:14:36.921+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.192 seconds
+[2024-12-01T15:18:04.432+0500] {processor.py:186} INFO - Started process (PID=29297) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:18:04.434+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-12-01T15:18:04.437+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:18:04.437+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:18:04.466+0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-12-01T15:18:04.584+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:18:04.584+0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-01T15:18:04.596+0500] {logging_mixin.py:190} INFO - [2024-12-01T15:18:04.596+0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-12-01T15:18:04.618+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.191 seconds
