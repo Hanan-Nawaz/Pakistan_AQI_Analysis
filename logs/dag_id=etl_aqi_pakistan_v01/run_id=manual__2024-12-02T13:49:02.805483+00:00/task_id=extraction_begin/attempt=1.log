@@ -1,0 +1,19 @@
+[2024-12-02T18:49:09.821+0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T18:49:09.833+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_aqi_pakistan_v01.extraction_begin manual__2024-12-02T13:49:02.805483+00:00 [queued]>
+[2024-12-02T18:49:09.840+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_aqi_pakistan_v01.extraction_begin manual__2024-12-02T13:49:02.805483+00:00 [queued]>
+[2024-12-02T18:49:09.840+0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-02T18:49:09.944+0500] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extraction_begin> on 2024-12-02 13:49:02.805483+00:00
+[2024-12-02T18:49:09.952+0500] {logging_mixin.py:190} WARNING - /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5433) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-02T18:49:09.954+0500] {standard_task_runner.py:72} INFO - Started process 5439 to run task
+[2024-12-02T18:49:09.955+0500] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_aqi_pakistan_v01', 'extraction_begin', 'manual__2024-12-02T13:49:02.805483+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T/tmp7jbb1xa1']
+[2024-12-02T18:49:09.961+0500] {standard_task_runner.py:105} INFO - Job 55: Subtask extraction_begin
+[2024-12-02T18:49:10.015+0500] {task_command.py:467} INFO - Running <TaskInstance: etl_aqi_pakistan_v01.extraction_begin manual__2024-12-02T13:49:02.805483+00:00 [running]> on host abduls-macbook-pro.local
+[2024-12-02T18:49:10.087+0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Abdul_Hanan_Nawaz' AIRFLOW_CTX_DAG_ID='etl_aqi_pakistan_v01' AIRFLOW_CTX_TASK_ID='extraction_begin' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T13:49:02.805483+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-02T13:49:02.805483+00:00'
+[2024-12-02T18:49:10.088+0500] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T18:49:10.106+0500] {logging_mixin.py:190} INFO - **** Extraction Begins ****
+[2024-12-02T18:49:10.107+0500] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-02T18:49:10.113+0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-02T18:49:10.114+0500] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_aqi_pakistan_v01, task_id=extraction_begin, run_id=manual__2024-12-02T13:49:02.805483+00:00, execution_date=20241202T134902, start_date=20241202T134909, end_date=20241202T134910
+[2024-12-02T18:49:10.139+0500] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-02T18:49:10.164+0500] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-02T18:49:10.166+0500] {local_task_job_runner.py:245} INFO - ::endgroup::

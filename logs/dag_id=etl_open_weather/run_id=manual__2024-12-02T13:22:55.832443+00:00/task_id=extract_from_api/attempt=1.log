@@ -1,0 +1,33 @@
+[2024-12-02T18:22:59.161+0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T18:22:59.173+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T13:22:55.832443+00:00 [queued]>
+[2024-12-02T18:22:59.182+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T13:22:55.832443+00:00 [queued]>
+[2024-12-02T18:22:59.183+0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2024-12-02T18:22:59.195+0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): extract_from_api> on 2024-12-02 13:22:55.832443+00:00
+[2024-12-02T18:22:59.202+0500] {logging_mixin.py:190} WARNING - /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3546) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-02T18:22:59.205+0500] {standard_task_runner.py:72} INFO - Started process 3552 to run task
+[2024-12-02T18:22:59.206+0500] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_open_weather', 'extract_from_api', 'manual__2024-12-02T13:22:55.832443+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T/tmpm_y136m7']
+[2024-12-02T18:22:59.210+0500] {standard_task_runner.py:105} INFO - Job 63: Subtask extract_from_api
+[2024-12-02T18:22:59.261+0500] {task_command.py:467} INFO - Running <TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T13:22:55.832443+00:00 [running]> on host abduls-macbook-pro.local
+[2024-12-02T18:22:59.338+0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Abdul_Hanan_Nawaz' AIRFLOW_CTX_DAG_ID='etl_open_weather' AIRFLOW_CTX_TASK_ID='extract_from_api' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T13:22:55.832443+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-02T13:22:55.832443+00:00'
+[2024-12-02T18:22:59.340+0500] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T18:22:59.361+0500] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T
+[2024-12-02T18:22:59.362+0500] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', 'python3 /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py']
+[2024-12-02T18:22:59.369+0500] {subprocess.py:99} INFO - Output:
+[2024-12-02T18:23:01.922+0500] {subprocess.py:106} INFO - http://api.openweathermap.org/data/2.5/air_pollution?
+[2024-12-02T18:23:01.923+0500] {subprocess.py:106} INFO - --Loading--Lahore_Data
+[2024-12-02T18:23:01.924+0500] {subprocess.py:106} INFO - Extraction for Lahore Completed!
+[2024-12-02T18:23:01.925+0500] {subprocess.py:106} INFO - --Loading--Karachi_Data
+[2024-12-02T18:23:01.926+0500] {subprocess.py:106} INFO - Extraction for Karachi Completed!
+[2024-12-02T18:23:01.927+0500] {subprocess.py:106} INFO - --Loading--Islamabad_Data
+[2024-12-02T18:23:01.928+0500] {subprocess.py:106} INFO - Extraction for Islamabad Completed!
+[2024-12-02T18:23:01.928+0500] {subprocess.py:106} INFO - --Loading--Quetta_Data
+[2024-12-02T18:23:01.929+0500] {subprocess.py:106} INFO - Extraction for Quetta Completed!
+[2024-12-02T18:23:01.930+0500] {subprocess.py:106} INFO - --Loading--Peshawar_Data
+[2024-12-02T18:23:01.930+0500] {subprocess.py:106} INFO - Extraction for Peshawar Completed!
+[2024-12-02T18:23:01.931+0500] {subprocess.py:106} INFO - Extraction phase completed!
+[2024-12-02T18:23:02.045+0500] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-12-02T18:23:02.073+0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-02T18:23:02.074+0500] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_open_weather, task_id=extract_from_api, run_id=manual__2024-12-02T13:22:55.832443+00:00, execution_date=20241202T132255, start_date=20241202T132259, end_date=20241202T132302
+[2024-12-02T18:23:02.119+0500] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-02T18:23:02.139+0500] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-02T18:23:02.139+0500] {local_task_job_runner.py:245} INFO - ::endgroup::

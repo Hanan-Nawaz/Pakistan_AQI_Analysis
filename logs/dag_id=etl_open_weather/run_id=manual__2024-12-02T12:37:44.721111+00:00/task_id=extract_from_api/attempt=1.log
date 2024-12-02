@@ -1,0 +1,110 @@
+[2024-12-02T17:37:49.424+0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T17:37:49.436+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T12:37:44.721111+00:00 [queued]>
+[2024-12-02T17:37:49.443+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T12:37:44.721111+00:00 [queued]>
+[2024-12-02T17:37:49.444+0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2024-12-02T17:37:49.456+0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): extract_from_api> on 2024-12-02 12:37:44.721111+00:00
+[2024-12-02T17:37:49.464+0500] {logging_mixin.py:190} WARNING - /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3271) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-02T17:37:49.467+0500] {standard_task_runner.py:72} INFO - Started process 3277 to run task
+[2024-12-02T17:37:49.469+0500] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_open_weather', 'extract_from_api', 'manual__2024-12-02T12:37:44.721111+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T/tmpw5rn1_l4']
+[2024-12-02T17:37:49.475+0500] {standard_task_runner.py:105} INFO - Job 58: Subtask extract_from_api
+[2024-12-02T17:37:49.520+0500] {task_command.py:467} INFO - Running <TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T12:37:44.721111+00:00 [running]> on host abduls-macbook-pro.local
+[2024-12-02T17:37:49.595+0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Abdul_Hanan_Nawaz' AIRFLOW_CTX_DAG_ID='etl_open_weather' AIRFLOW_CTX_TASK_ID='extract_from_api' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T12:37:44.721111+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-02T12:37:44.721111+00:00'
+[2024-12-02T17:37:49.596+0500] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T17:37:49.617+0500] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T
+[2024-12-02T17:37:49.618+0500] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', 'python3 /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py']
+[2024-12-02T17:37:49.625+0500] {subprocess.py:99} INFO - Output:
+[2024-12-02T17:37:53.313+0500] {subprocess.py:106} INFO - http://api.openweathermap.org/data/2.5/air_pollution?
+[2024-12-02T17:37:53.313+0500] {subprocess.py:106} INFO - --Loading--Lahore_Data
+[2024-12-02T17:37:53.314+0500] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2024-12-02T17:37:53.315+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py", line 50, in <module>
+[2024-12-02T17:37:53.316+0500] {subprocess.py:106} INFO -     main()
+[2024-12-02T17:37:53.317+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py", line 44, in main
+[2024-12-02T17:37:53.317+0500] {subprocess.py:106} INFO -     df.to_csv(f"extracted_data/{keys[i]}_data.csv")
+[2024-12-02T17:37:53.318+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+[2024-12-02T17:37:53.319+0500] {subprocess.py:106} INFO -     return func(*args, **kwargs)
+[2024-12-02T17:37:53.320+0500] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2024-12-02T17:37:53.320+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/core/generic.py", line 3967, in to_csv
+[2024-12-02T17:37:53.321+0500] {subprocess.py:106} INFO -     return DataFrameRenderer(formatter).to_csv(
+[2024-12-02T17:37:53.321+0500] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-02T17:37:53.322+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+[2024-12-02T17:37:53.323+0500] {subprocess.py:106} INFO -     csv_formatter.save()
+[2024-12-02T17:37:53.324+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 251, in save
+[2024-12-02T17:37:53.325+0500] {subprocess.py:106} INFO -     with get_handle(
+[2024-12-02T17:37:53.326+0500] {subprocess.py:106} INFO -          ^^^^^^^^^^^
+[2024-12-02T17:37:53.327+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/io/common.py", line 749, in get_handle
+[2024-12-02T17:37:53.327+0500] {subprocess.py:106} INFO -     check_parent_directory(str(handle))
+[2024-12-02T17:37:53.328+0500] {subprocess.py:106} INFO -   File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+[2024-12-02T17:37:53.328+0500] {subprocess.py:106} INFO -     raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+[2024-12-02T17:37:53.329+0500] {subprocess.py:106} INFO - OSError: Cannot save file into a non-existent directory: 'extracted_data'
+[2024-12-02T17:37:53.421+0500] {subprocess.py:110} INFO - Command exited with return code 1
+[2024-12-02T17:37:53.430+0500] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 762, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-12-02T17:37:53.438+0500] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_open_weather, task_id=extract_from_api, run_id=manual__2024-12-02T12:37:44.721111+00:00, execution_date=20241202T123744, start_date=20241202T123749, end_date=20241202T123753
+[2024-12-02T17:37:53.453+0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-02T17:37:53.454+0500] {standard_task_runner.py:124} ERROR - Failed to execute job 58 for task extract_from_api (Bash command failed. The command returned a non-zero exit code 1.; 3277)
+Traceback (most recent call last):
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 762, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-12-02T17:37:53.498+0500] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-02T17:37:53.550+0500] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-02T17:37:53.553+0500] {local_task_job_runner.py:245} INFO - ::endgroup::

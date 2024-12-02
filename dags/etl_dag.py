@@ -1,10 +1,7 @@
 from airflow import DAG
 from datetime import datetime, timedelta
+from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
-
-import sys
-sys.path.insert(0, '/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis')
-from etl.extract import main as main_extract
 
 default_args = {
     "owner" : "Abdul_Hanan_Nawaz",
@@ -13,19 +10,37 @@ default_args = {
 }
 
 etl_dag = DAG(
-    'etl_open_weather',
+    'etl_aqi_pakistan_v01',
     default_args=default_args,
     start_date= datetime(2024, 12, 1),
     schedule_interval= "0 7 * * *"
 )
 
-extract_task = PythonOperator(
+def extraction_start():
+    print("**** Extraction Begins ****")
+
+def extraction_end():
+    print("**** Extraction Ends ****")
+
+extraction_begin = PythonOperator(
+    task_id = 'extraction_begin',
+    python_callable = extraction_start,
+    dag = etl_dag
+)
+
+extraction_under_progress = BashOperator(
     task_id = 'extract_from_api',
-    python_callable= main_extract,
-    retries=3,  # Max retries before failing
-    retry_delay=timedelta(minutes=5),  # Wait 5 minutes between retries
-    execution_timeout=timedelta(minutes=30),  # Max time for task execution
-    dag=etl_dag
+    bash_command = 'python3 /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py',
+    retries = 3,  # Max retries before failing
+    retry_delay = timedelta(minutes=5),  # Wait 5 minutes between retries
+    execution_timeout = timedelta(minutes=30),  # Max time for task execution
+    dag = etl_dag
     )
 
-extract_task
+extraction_complete = PythonOperator(
+    task_id = 'extraction_end',
+    python_callable = extraction_end,
+    dag = etl_dag
+)
+
+extraction_begin >> extraction_under_progress >> extraction_complete

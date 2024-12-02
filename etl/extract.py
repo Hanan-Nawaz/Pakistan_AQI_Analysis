@@ -6,7 +6,6 @@ import pandas as pd
 def configure():
     dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
     load_dotenv(dotenv_path)
-    print(os.getenv('base_url'))
 
 # first element is latitude and second is longitude
 city_data = {
@@ -19,7 +18,6 @@ city_data = {
 
 def get_data_json(city):
     api_url = f'{os.getenv('base_url')}lat={city_data[city][0]}&lon={city_data[city][1]}&appid={os.getenv('api_key')}'
-    print(api_url)
     try:
         print(f"--Loading--{city}_Data")
         response = req.get(api_url)
@@ -42,7 +40,7 @@ def main():
     for i in range(0, 5):
         data = get_data_json(keys[i])
         df = pd.json_normalize(data, sep="_")
-        df.to_csv(f"extracted_data/{keys[i]}_data.csv")
+        df.to_csv(f"/Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/extracted_data/{keys[i]}_current_data.csv")
         print(f"Extraction for {keys[i]} Completed!")
         if i == 4:
             print("Extraction phase completed!")
