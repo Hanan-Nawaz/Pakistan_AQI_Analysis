@@ -1,0 +1,22 @@
+[2024-12-02T13:57:40.227+0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T13:57:40.247+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T08:57:34.501970+00:00 [queued]>
+[2024-12-02T13:57:40.254+0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T08:57:34.501970+00:00 [queued]>
+[2024-12-02T13:57:40.254+0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-02T13:57:40.268+0500] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_from_api> on 2024-12-02 08:57:34.501970+00:00
+[2024-12-02T13:57:40.274+0500] {logging_mixin.py:190} WARNING - /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=50717) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-02T13:57:40.277+0500] {standard_task_runner.py:72} INFO - Started process 50724 to run task
+[2024-12-02T13:57:40.279+0500] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_open_weather', 'extract_from_api', 'manual__2024-12-02T08:57:34.501970+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/qc/y2_zkt8d01zf90dfpf72dm400000gn/T/tmp5z126xj9']
+[2024-12-02T13:57:40.284+0500] {standard_task_runner.py:105} INFO - Job 18: Subtask extract_from_api
+[2024-12-02T13:57:40.347+0500] {task_command.py:467} INFO - Running <TaskInstance: etl_open_weather.extract_from_api manual__2024-12-02T08:57:34.501970+00:00 [running]> on host abduls-macbook-pro.local
+[2024-12-02T13:57:40.592+0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Abdul_Hanan_Nawaz' AIRFLOW_CTX_DAG_ID='etl_open_weather' AIRFLOW_CTX_TASK_ID='extract_from_api' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T08:57:34.501970+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-02T08:57:34.501970+00:00'
+[2024-12-02T13:57:40.597+0500] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T13:57:40.640+0500] {logging_mixin.py:190} INFO - http://api.openweathermap.org/data/2.5/air_pollution/history?
+[2024-12-02T13:57:40.641+0500] {logging_mixin.py:190} INFO - --Loading--Lahore_Data
+[2024-12-02T13:59:31.109+0500] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2024-12-02T13:59:31.111+0500] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-02T13:59:31.122+0500] {process_utils.py:132} INFO - Sending 15 to group 50724. PIDs of all processes in the group: [50724]
+[2024-12-02T13:59:31.123+0500] {process_utils.py:87} INFO - Sending the signal 15 to group 50724
+[2024-12-02T14:00:31.162+0500] {process_utils.py:150} WARNING - process psutil.Process(pid=50724, name='python3.12', status='running', started='13:57:40') did not respond to SIGTERM. Trying SIGKILL
+[2024-12-02T14:00:31.163+0500] {process_utils.py:87} INFO - Sending the signal 9 to group 50724
+[2024-12-02T14:00:31.172+0500] {process_utils.py:80} INFO - Process psutil.Process(pid=50724, name='python3.12', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='13:57:40') (50724) terminated with exit code -9
+[2024-12-02T14:00:31.173+0500] {standard_task_runner.py:190} ERROR - ('Job 18 was killed before it finished (likely due to running out of memory)', 'For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#LocalTaskJob-killed')

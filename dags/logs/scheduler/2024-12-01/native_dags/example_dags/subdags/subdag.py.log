@@ -1,5 +1,0 @@
-[2024-12-01T16:45:49.715+0500] {processor.py:186} INFO - Started process (PID=36313) to work on /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/subdags/subdag.py
-[2024-12-01T16:45:49.716+0500] {processor.py:914} INFO - Processing file /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
-[2024-12-01T16:45:49.717+0500] {logging_mixin.py:190} INFO - [2024-12-01T16:45:49.717+0500] {dagbag.py:588} INFO - Filling up the DagBag from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/subdags/subdag.py
-[2024-12-01T16:45:49.720+0500] {processor.py:927} WARNING - No viable dags retrieved from /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/subdags/subdag.py
-[2024-12-01T16:45:49.829+0500] {processor.py:208} INFO - Processing /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/myenv/lib/python3.12/site-packages/airflow/example_dags/subdags/subdag.py took 0.120 seconds
