@@ -30,7 +30,7 @@ extraction_begin = PythonOperator(
 
 extraction_under_progress = BashOperator(
     task_id = 'extract_from_api',
-    bash_command = 'python3 /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/extract.py',
+    bash_command = 'python3 /Users/hanan-nawaz/Documents/Projects/Pakistan_AQI_Analysis/etl/etl.py',
     retries = 3,  # Max retries before failing
     retry_delay = timedelta(minutes=5),  # Wait 5 minutes between retries
     execution_timeout = timedelta(minutes=30),  # Max time for task execution
