@@ -4,6 +4,10 @@ import os
 import pandas as pd
 
 def configure():
+    """
+    load data from .env file
+    """
+
     dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
     load_dotenv(dotenv_path)
 
@@ -17,9 +21,13 @@ city_data = {
     }
 
 def get_data_json(city):
+    """
+    api_call code here.
+    """
+
     api_url = f'{os.getenv('base_url')}lat={city_data[city][0]}&lon={city_data[city][1]}&appid={os.getenv('api_key')}'
     try:
-        print(f"--Loading--{city}_Data")
+        print(f"\n --Loading--{city}_Data \n")
         response = req.get(api_url)
         response.raise_for_status()
         return response.json()
@@ -35,20 +43,51 @@ def get_data_json(city):
     return None
 
 def extract():
-    configure()
+    """
+    extract code here.
+    """
+
     keys = list(city_data.keys())
     data_list = []
+
     for i in range(0, 5):
         data = get_data_json(keys[i])
         data_list.append(data)
-        print(f"Extraction for {keys[i]} Completed!")
-        if i == 4 and len(data_list) > 3:
-            print("Extraction phase completed!")
+
+        """
+        As the range start from 0, that is the reason, I added (i + 1) below, so i will be 0 , 1, 2, 3, 4
+        and when i is 0, 0+1 = 1 and when lahore's data is added, length of data_list is 1, so, it prints 
+        the statement, else breaks. 
+        """
+
+        if len(data_list) == (i + 1):
+            print(f" \n Extraction for {keys[i]} Completed! \n")
+        else:
+            print(f"\n Extraction for {keys[i]} Failed! Please Start Again")
+            break
     
     return data_list
 
+def transform(data_json_list):
+    """
+    transform code here.
+    """
+
+    print("\n Transformation phase Started! \n")
+
+    df_each = [pd.json_normalize(item['list']) for item in data_json_list]
+    df_data =  pd.concat(df_each, ignore_index=True)
+    df_data = (item['coord'] for item in data_json_list)
+
+    df_data.to_csv('data.csv')
+
 def main():
-    data_json = extract()
+    configure()
+
+    data_json_list = extract()
+    if len(data_json_list) == 5:
+        print("\n Extraction phase completed! \n")
+        transform(data_json_list)
 
 if __name__ == "__main__":
     main()
