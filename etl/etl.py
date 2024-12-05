@@ -73,13 +73,13 @@ def transform(data_json_list):
     transform code here.
     """
 
-    print("\n Transformation phase Started! \n")
+    print("\n Transformation phase begin! \n")
 
     df_each = [pd.json_normalize(item['list']) for item in data_json_list]
     df_data =  pd.concat(df_each, ignore_index=True)
-    df_data = (item['coord'] for item in data_json_list)
+    df_data = (item['coord'] for item in data_json_list) #working on this -> add city by using coords
 
-    df_data.to_csv('data.csv')
+    print(df_data)
 
 def main():
     configure()
