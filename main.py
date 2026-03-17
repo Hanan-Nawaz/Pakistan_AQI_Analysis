@@ -4,7 +4,9 @@ import yaml
 from logger.logger import create_logger
 from etl.extract import get_historical_data, get_daily_data
 import logging
-from typing import List, Dict
+from etl.transform.transform_daily import transform_daily
+import json
+import datetime
 
 def get_yaml(file_path: str) -> dict:
     """Get configurations of the projects
@@ -50,7 +52,7 @@ def get_logger(config: dict) -> logging.Logger:
     format = config['general']['logs']['format']
     return create_logger(file_path, format, level)
 
-def extract_historical(config: dict, api_key: str, logger:logging.Logger) -> List[Dict]:
+def extract_historical(config: dict, api_key: str, logger:logging.Logger):
     """Get AQI historical data from the Open Weather API
 
     Parameters
@@ -74,7 +76,7 @@ def extract_historical(config: dict, api_key: str, logger:logging.Logger) -> Lis
     except Exception as e:
         logger.exception(e)
  
-def extract_daily(config: dict, api_key: str, logger:logging.Logger) -> List[Dict]:
+def extract_daily(config: dict, api_key: str, logger:logging.Logger):
     """Get AQI daily data from the Open Weather API
 
     Parameters
@@ -103,7 +105,7 @@ def main():
     config = get_yaml('config/config.yaml')
     logger = get_logger(config)
     data = extract_daily(config['extract'], os.getenv('api_key'), logger)
-    print(data)
+    transform_daily(config['transform'], data, logger)
 
 if __name__ == "__main__":
     main()

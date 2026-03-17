@@ -7,3 +7,6 @@ Config/
 
 # Ignore the __pycache__ directory which contains compiled Python files
 __pycache__/
+
+# Ignore the data directory which may contain large datasets or sensitive information
+data/
