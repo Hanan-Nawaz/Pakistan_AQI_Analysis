@@ -1,1 +1,9 @@
+#Files not to be pushed to git
+# Ignore the .env file which contains sensitive information
 .env
+
+# Ignore the Config directory which may contain environment-specific configurations
+Config/
+
+# Ignore the __pycache__ directory which contains compiled Python files
+__pycache__/

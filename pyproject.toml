@@ -1,0 +1,12 @@
+[project]
+name = "pakistan-aqi-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "pandas>=3.0.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.32.5",
+]
